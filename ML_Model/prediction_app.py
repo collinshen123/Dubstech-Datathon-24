@@ -2,7 +2,7 @@ import streamlit as st
 import pickle
 import gzip
 
-with open('ML_Model/trained_models.pkl', 'rb') as f:
+with open('trained_models.pkl', 'rb') as f:
     saved_data = pickle.load(f)
 
 trained_models = saved_data['trained_models']
@@ -26,7 +26,7 @@ def main():
     st.subheader('CD Consulting inc.')
     st.write('')
 
-    st.sidebar.image('port_map.jpeg')
+    # st.sidebar.image('port_map.jpeg')
 
     selected_model = st.selectbox('Select Port of Entry Model', sorted(model_names))
     
