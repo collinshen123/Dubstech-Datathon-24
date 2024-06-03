@@ -1,9 +1,17 @@
 import streamlit as st
 import pickle
-import gzip
+import os
 
-with open('trained_models.pkl', 'rb') as f:
+# Get the directory that this script is in
+dir_path = os.path.dirname(os.path.realpath(__file__))
+
+# Build the file path
+file_path = os.path.join(dir_path, 'trained_models.pkl')
+
+with open(file_path, 'rb') as f:
     saved_data = pickle.load(f)
+
+
 
 trained_models = saved_data['trained_models']
 evaluation_metrics = saved_data['evaluation_metrics']
