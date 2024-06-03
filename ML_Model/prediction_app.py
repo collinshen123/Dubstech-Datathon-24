@@ -34,7 +34,7 @@ def main():
     st.subheader('CD Consulting inc.')
     st.write('')
 
-    # st.sidebar.image('port_map.jpeg')
+    st.sidebar.image('port_map.jpeg')
 
     selected_model = st.selectbox('Select Port of Entry Model', sorted(model_names))
     
