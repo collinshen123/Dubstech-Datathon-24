@@ -2,7 +2,7 @@ import streamlit as st
 import pickle
 import gzip
 
-with open('trained_models.pkl', 'rb') as f:
+with open('ML_Model/trained_models.pkl', 'rb') as f:
     saved_data = pickle.load(f)
 
 trained_models = saved_data['trained_models']
