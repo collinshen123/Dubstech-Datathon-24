@@ -7,6 +7,8 @@ dir_path = os.path.dirname(os.path.realpath(__file__))
 
 # Build the file path
 file_path = os.path.join(dir_path, 'trained_models.pkl')
+image_path = os.path.join(dir_path, 'port_map.jpeg')
+
 
 with open(file_path, 'rb') as f:
     saved_data = pickle.load(f)
@@ -34,7 +36,7 @@ def main():
     st.subheader('CD Consulting inc.')
     st.write('')
 
-    st.sidebar.image('port_map.jpeg')
+    st.sidebar.image(image_path)
 
     selected_model = st.selectbox('Select Port of Entry Model', sorted(model_names))
     
